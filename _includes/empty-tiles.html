@@ -1,0 +1,9 @@
+{% assign cat = include.category %}
+<div class="empty-gallery empty-gallery--{{ cat }}">
+  <div class="empty-tiles" aria-hidden="true">
+    <div class="empty-tile"><img src="{{ '/assets/placeholders/' | append: cat | append: '-1.svg' | relative_url }}" alt="" /></div>
+    <div class="empty-tile"><img src="{{ '/assets/placeholders/' | append: cat | append: '-2.svg' | relative_url }}" alt="" /></div>
+    <div class="empty-tile"><img src="{{ '/assets/placeholders/' | append: cat | append: '-3.svg' | relative_url }}" alt="" /></div>
+  </div>
+  <p class="empty-note">A home for the pieces to come <span aria-hidden="true">✳</span></p>
+</div>

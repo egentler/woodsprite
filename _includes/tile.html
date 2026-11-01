@@ -1,0 +1,6 @@
+{% assign piece = include.piece %}
+{% assign picture = piece.thumbnail | default: piece.image %}
+<a class="product-tile" href="{{ piece.image | relative_url }}" data-lightbox data-title="{{ piece.title | escape }}" data-description="{{ piece.caption | default: '' | escape }}" data-shop="{{ piece.shop_url | default: '' | escape }}" aria-label="View {{ piece.title | escape }} full size">
+  <img src="{{ picture | relative_url }}" alt="{{ piece.title | escape }}" loading="lazy" decoding="async" width="1000" height="1000" />
+  <span class="tile-hover" aria-hidden="true"><span>{{ piece.title | escape }}</span><span class="tile-plus">↗</span></span>
+</a>

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% assign pieces = site.pieces | where: "category", page.section | where: "published", true | sort: "date" | reverse %}
+<section class="gallery-intro shell">
+  <a class="backlink" href="{{ '/' | relative_url }}">← All collections</a>
+  <p class="eyebrow">The WoodSprite collection <span class="eyebrow-star" aria-hidden="true">✳</span> {{ page.eyebrow | escape }}</p>
+  <h1 class="display-title">{{ page.heading | escape }}</h1>
+  <p class="gallery-blurb">{{ page.description | escape }}</p>
+</section>
+<section class="shell gallery-area" aria-label="{{ page.heading | escape }} gallery">
+  {% if pieces.size > 0 %}
+    <div class="gallery-grid">
+      {% for piece in pieces %}{% include tile.html piece=piece %}{% endfor %}
+    </div>
+  {% else %}
+    {% include empty-tiles.html category=page.section %}
+  {% endif %}
+  <div class="gallery-bottom"><a href="{{ '/' | relative_url }}" class="text-link">← Return to the collections</a></div>
+</section>

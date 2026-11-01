@@ -1,0 +1,13 @@
+<header class="site-header" id="top">
+  <div class="shell header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="WoodSprite home">
+      <span class="brand-word brand-word--wood">Wood</span><span class="brand-word brand-word--sprite">Spr<span class="brand-i">ı<span class="brand-leaf" aria-hidden="true"><svg viewBox="0 0 24 31"><path d="M7.5 25C1 14 7 5 19 2c2 14-2 22-11.5 23Z" fill="currentColor"/><path d="M7.5 25c3-7 5.5-11 10-17" fill="none" stroke="#f8f3ea" stroke-width="1.25" stroke-linecap="round"/></svg></span></span>te</span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="{{ '/earrings/' | relative_url }}" {% if page.section == 'earrings' %}aria-current="page"{% endif %}>Earrings</a>
+      <a href="{{ '/necklaces/' | relative_url }}" {% if page.section == 'necklaces' %}aria-current="page"{% endif %}>Necklaces</a>
+      <a href="{{ '/more/' | relative_url }}" {% if page.section == 'more' %}aria-current="page"{% endif %}>More</a>
+      {% if site.data.site.shop_url and site.data.site.shop_url != '' %}<a class="nav-shop" href="{{ site.data.site.shop_url | escape }}" target="_blank" rel="noopener noreferrer">Shop <span aria-hidden="true">↗</span></a>{% endif %}
+    </nav>
+  </div>
+</header>

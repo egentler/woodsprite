@@ -1,0 +1,87 @@
+# Pages CMS configuration — same editing workflow as Deep Blue.
+media:
+  input: assets/uploads
+  output: /assets/uploads
+  rename: safe
+
+content:
+  - name: pieces
+    label: Jewelry photos
+    type: collection
+    path: _pieces
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields: [title, category, date, published]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Piece name
+        type: string
+        required: true
+        description: Used as the image caption and accessibility text.
+      - name: category
+        label: Gallery
+        type: select
+        required: true
+        options:
+          values: [earrings, necklaces, more]
+      - name: image
+        label: Square jewelry photograph
+        type: image
+        required: true
+        description: Upload one square photo. Clicking it opens the original full-size image.
+      - name: thumbnail
+        label: Optional separate square thumbnail
+        type: image
+        description: Leave empty to use the original photo. Optional if you want a different crop on the grid.
+      - name: date
+        label: Date added
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+        description: Newer dates appear first in each gallery.
+      - name: caption
+        label: Optional short description
+        type: text
+        description: Shown when the photograph is opened.
+      - name: shop_url
+        label: Optional Etsy / purchase URL
+        type: string
+        description: Only displayed in the full-size viewer when supplied.
+      - name: published
+        label: Published
+        type: boolean
+        default: true
+        description: Off hides the piece from the website. Uploaded images are still in the public GitHub repository.
+
+  - name: site_settings
+    label: Site wording and links
+    type: file
+    path: _data/site.yml
+    format: yaml
+    fields:
+      - name: tagline
+        label: Footer sentiment
+        type: string
+      - name: intro
+        label: Homepage introduction
+        type: text
+      - name: about
+        label: Footer/about paragraph
+        type: text
+      - name: shop_url
+        label: Main shop link (optional)
+        type: string
+        description: Leave blank until your Etsy shop is ready.
+      - name: contact_email
+        label: Contact email (optional)
+        type: string
+      - name: instagram_url
+        label: Instagram link (optional)
+        type: string

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="Photo placeholder">
+    <rect width="500" height="500" fill="#eddfd8"/>
+    <circle cx="250" cy="235" r="187" fill="#fff8ee" opacity=".29"/>
+    <g fill="none" stroke="#a78380" opacity=".40" stroke-width="1.5"><path d="M70 92q33 0 47-41q-40 8-47 41z"/><path d="M70 92q-5-37-35-42q6 41 35 42z"/><path d="M71 92q1 47-21 76"/><path d="M435 383q-33 0-47 41q40-8 47-41z"/><path d="M435 383q5 37 35 42q-6-41-35-42z"/></g><g fill="none" stroke="#a78380" stroke-width="2.9" stroke-linecap="round"><path d="M107 101Q128 296 250 306Q372 296 393 101"/>
+      <circle cx="249" cy="340" r="39"/><path d="M249 314v52m-26-26h52"/>
+      <circle cx="107" cy="101" r="5" fill="'+stroke+'"/><circle cx="393" cy="101" r="5" fill="'+stroke+'"/></g>
+    <path d="M214 439h72" stroke="#a78380" stroke-width="1" opacity=".6"/>
+    <text x="250" y="458" font-family="Georgia,serif" fill="#a78380" font-size="15" text-anchor="middle" letter-spacing="3">YOUR PHOTO HERE</text>
+    </svg>
