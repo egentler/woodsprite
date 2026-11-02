@@ -33,3 +33,8 @@
   .hero-copy { order:1; width:100%; padding:6px 7px 0; display:block; text-align:center; }
   .hero h1 { margin:0 auto; max-width:530px; font-size:clamp(42px,9.4vw,62px); line-height:1.05; }
 }
+
+/* WoodSprite attribution and contact information beneath footer wordmark. */
+.footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin:12px 0 0;font-style:normal;font-size:12px;line-height:1.8;color:#e4e5d7}
+.footer-contact a{color:inherit;text-decoration:none;overflow-wrap:anywhere}
+.footer-contact a:hover{text-decoration:underline;text-underline-offset:3px}

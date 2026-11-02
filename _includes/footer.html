@@ -3,11 +3,14 @@
     <div>
       <div class="footer-mark">Wood<span>Sprite</span><span class="footer-symbol" aria-hidden="true">✳</span></div>
       <p class="footer-about">{{ site.data.site.about | escape }}</p>
+      <address class="footer-contact">
+        {% if site.data.site.contact_email and site.data.site.contact_email != '' %}<a href="mailto:{{ site.data.site.contact_email | escape }}">{{ site.data.site.contact_email | escape }}</a>{% endif %}
+        {% if site.data.site.contact_phone and site.data.site.contact_phone != '' %}<a href="tel:{{ site.data.site.contact_phone | remove: ' ' | remove: '-' | escape }}">{{ site.data.site.contact_phone | escape }}</a>{% endif %}
+      </address>
     </div>
     <div class="footer-side">
       <p class="footer-kicker">{{ site.data.site.tagline | escape }}</p>
       <div class="footer-links">
-        {% if site.data.site.contact_email and site.data.site.contact_email != '' %}<a href="mailto:{{ site.data.site.contact_email | escape }}">Contact</a>{% endif %}
         {% if site.data.site.instagram_url and site.data.site.instagram_url != '' %}<a href="{{ site.data.site.instagram_url | escape }}" target="_blank" rel="noopener noreferrer">Instagram ↗</a>{% endif %}
         {% if site.data.site.shop_url and site.data.site.shop_url != '' %}<a href="{{ site.data.site.shop_url | escape }}" target="_blank" rel="noopener noreferrer">Shop ↗</a>{% endif %}
         <a href="#top">Back to top ↑</a>
