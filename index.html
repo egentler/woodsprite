@@ -11,7 +11,7 @@ layout: default
 </section>
 
 <section class="collection shell" id="earrings" aria-labelledby="earrings-title">
-  <div class="section-heading"><div><span class="section-index">01 / THE COLLECTION</span><h2 id="earrings-title"><a href="{{ '/earrings/' | relative_url }}">Earrings <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div></div>
+  <div class="section-heading"><div><span class="section-index">01 / THE COLLECTION</span><h2 id="earrings-title"><a href="{{ '/earrings/' | relative_url }}">Earrings</a></h2></div></div>
   {% if earrings.size > 0 %}
   <div class="featured-grid featured-grid--left {% if earrings.size < 3 %}featured-grid--few{% endif %}">{% for piece in earrings limit:5 %}{% include tile.html piece=piece %}{% endfor %}</div>
   {% else %}{% include empty-tiles.html category='earrings' %}{% endif %}
@@ -19,7 +19,7 @@ layout: default
 </section>
 
 <section class="collection shell" id="necklaces" aria-labelledby="necklaces-title">
-  <div class="section-heading"><div><span class="section-index">02 / THE COLLECTION</span><h2 id="necklaces-title"><a href="{{ '/necklaces/' | relative_url }}">Necklaces <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div></div>
+  <div class="section-heading"><div><span class="section-index">02 / THE COLLECTION</span><h2 id="necklaces-title"><a href="{{ '/necklaces/' | relative_url }}">Necklaces</a></h2></div></div>
   {% if necklaces.size > 0 %}
   <div class="featured-grid featured-grid--right {% if necklaces.size < 3 %}featured-grid--few{% endif %}">{% for piece in necklaces limit:5 %}{% include tile.html piece=piece %}{% endfor %}</div>
   {% else %}{% include empty-tiles.html category='necklaces' %}{% endif %}
@@ -28,7 +28,7 @@ layout: default
 
 {% comment %}The More section is temporarily hidden until product photos are ready.
 <section class="collection shell collection--more" id="more" aria-labelledby="more-title">
-  <div class="section-heading"><div><span class="section-index">03 / THE COLLECTION</span><h2 id="more-title"><a href="{{ '/more/' | relative_url }}">More <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div><p class="section-desc">Curiosities & other treasures.</p></div>
+  <div class="section-heading"><div><span class="section-index">03 / THE COLLECTION</span><h2 id="more-title"><a href="{{ '/more/' | relative_url }}">More</a></h2></div><p class="section-desc">Curiosities & other treasures.</p></div>
   <div class="more-layout"><div class="more-editorial"><span class="more-asterisk" aria-hidden="true">✳</span><p>And then,<br><em>something</em><br>unexpected.</p><span class="more-fine">A place for the little things that don't fit neatly into a box.</span></div>
     {% if more.size > 0 %}<div class="more-grid">{% for piece in more limit:4 %}{% include tile.html piece=piece %}{% endfor %}</div>
     {% else %}<div class="more-samples">{% for i in (1..4) %}<div class="empty-tile"><img src="{{ '/assets/placeholders/more-' | append: i | append: '.svg' | relative_url }}" alt="Sample placeholder for future jewelry photograph"></div>{% endfor %}</div>{% endif %}
