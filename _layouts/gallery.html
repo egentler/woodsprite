@@ -4,7 +4,6 @@ layout: default
 {% assign pieces = site.pieces | where: "category", page.section | where: "published", true | sort: "date" | reverse %}
 <section class="gallery-intro shell">
   <a class="backlink" href="{{ '/' | relative_url }}">← All collections</a>
-  <p class="eyebrow">The WoodSprite collection <span class="eyebrow-star" aria-hidden="true">✳</span> {{ page.eyebrow | escape }}</p>
   <h1 class="display-title">{{ page.heading | escape }}</h1>
   <p class="gallery-blurb">{{ page.description | escape }}</p>
 </section>
