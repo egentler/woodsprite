@@ -15,7 +15,7 @@ layout: default
   {% if earrings.size > 0 %}
   <div class="featured-grid featured-grid--left {% if earrings.size < 3 %}featured-grid--few{% endif %}">{% for piece in earrings limit:5 %}{% include tile.html piece=piece %}{% endfor %}</div>
   {% else %}{% include empty-tiles.html category='earrings' %}{% endif %}
-  <div class="section-tail"><span class="tail-sprig" aria-hidden="true">✧</span><a class="text-link" href="{{ '/earrings/' | relative_url }}">View all earrings <span aria-hidden="true">↗</span></a></div>
+  <div class="section-tail"><span class="tail-sprig" aria-hidden="true">✧</span><a class="text-link" href="{{ '/earrings/' | relative_url }}">View all earrings</a></div>
 </section>
 
 <section class="collection shell" id="necklaces" aria-labelledby="necklaces-title">
@@ -23,7 +23,7 @@ layout: default
   {% if necklaces.size > 0 %}
   <div class="featured-grid featured-grid--right {% if necklaces.size < 3 %}featured-grid--few{% endif %}">{% for piece in necklaces limit:5 %}{% include tile.html piece=piece %}{% endfor %}</div>
   {% else %}{% include empty-tiles.html category='necklaces' %}{% endif %}
-  <div class="section-tail"><span class="tail-sprig" aria-hidden="true">✧</span><a class="text-link" href="{{ '/necklaces/' | relative_url }}">View all necklaces <span aria-hidden="true">↗</span></a></div>
+  <div class="section-tail"><span class="tail-sprig" aria-hidden="true">✧</span><a class="text-link" href="{{ '/necklaces/' | relative_url }}">View all necklaces</a></div>
 </section>
 
 {% comment %}The More section is temporarily hidden until product photos are ready.
