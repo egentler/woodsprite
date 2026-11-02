@@ -69,9 +69,12 @@ content:
       - name: tagline
         label: Footer sentiment
         type: string
-      - name: intro
-        label: Homepage introduction
-        type: text
+      - name: hero_lead
+        label: Header wording (first part)
+        type: string
+      - name: hero_materials
+        label: Header wording (emphasized final part)
+        type: string
       - name: about
         label: Footer/about paragraph
         type: text

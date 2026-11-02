@@ -6,7 +6,6 @@
     <nav class="main-nav" aria-label="Main navigation">
       <a href="{{ '/earrings/' | relative_url }}" {% if page.section == 'earrings' %}aria-current="page"{% endif %}>Earrings</a>
       <a href="{{ '/necklaces/' | relative_url }}" {% if page.section == 'necklaces' %}aria-current="page"{% endif %}>Necklaces</a>
-      <a href="{{ '/more/' | relative_url }}" {% if page.section == 'more' %}aria-current="page"{% endif %}>More</a>
       {% if site.data.site.shop_url and site.data.site.shop_url != '' %}<a class="nav-shop" href="{{ site.data.site.shop_url | escape }}" target="_blank" rel="noopener noreferrer">Shop <span aria-hidden="true">↗</span></a>{% endif %}
     </nav>
   </div>

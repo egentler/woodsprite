@@ -5,20 +5,12 @@ layout: default
 {% assign necklaces = site.pieces | where: 'category', 'necklaces' | where: 'published', true | sort: 'date' | reverse %}
 {% assign more = site.pieces | where: 'category', 'more' | where: 'published', true | sort: 'date' | reverse %}
 <section class="hero shell" aria-labelledby="hero-title">
-  <div class="hero-copy">
-    <div class="eyebrow"><span class="eyebrow-star" aria-hidden="true">✳</span> FROM THE HEART OF THE WOODS</div>
-    <h1 id="hero-title">A little<br><em>woodland</em><br>magic.</h1>
-    <p class="hero-sub">{{ site.data.site.intro | escape }}</p>
-    <a class="explore-link" href="#earrings"><span>Explore the collection</span><span class="explore-circle" aria-hidden="true">↘</span></a>
-  </div>
-  <div class="hero-art" aria-hidden="true"><span class="hero-halo"></span><img src="{{ '/assets/images/woodsprite-fairy.webp' | relative_url }}" alt="" fetchpriority="high" width="997" height="865"></div>
-  <div class="hero-note" aria-hidden="true"><span>EST. IN WONDER</span><span>✧</span><span>ROOTED IN NATURE</span></div>
+  <div class="hero-art" aria-hidden="true"><span class="hero-halo"></span><img src="{{ '/assets/images/woodsprite-fairy.webp' | relative_url }}" alt="" fetchpriority="high" width="979" height="805"></div>
+  <div class="hero-copy"><h1 id="hero-title">{{ site.data.site.hero_lead | escape }} <em>{{ site.data.site.hero_materials | escape }}</em></h1></div>
 </section>
 
-<div class="collection-overline shell"><span class="section-number">THE COLLECTIONS</span><span class="collection-flourish" aria-hidden="true">✳ &nbsp; ✳ &nbsp; ✳</span><span class="section-number">01 — 03</span></div>
-
 <section class="collection shell" id="earrings" aria-labelledby="earrings-title">
-  <div class="section-heading"><div><span class="section-index">01 / THE COLLECTION</span><h2 id="earrings-title"><a href="{{ '/earrings/' | relative_url }}">Earrings <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div><p class="section-desc">Little details, lovely things.</p></div>
+  <div class="section-heading"><div><span class="section-index">01 / THE COLLECTION</span><h2 id="earrings-title"><a href="{{ '/earrings/' | relative_url }}">Earrings <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div></div>
   {% if earrings.size > 0 %}
   <div class="featured-grid featured-grid--left {% if earrings.size < 3 %}featured-grid--few{% endif %}">{% for piece in earrings limit:5 %}{% include tile.html piece=piece %}{% endfor %}</div>
   {% else %}{% include empty-tiles.html category='earrings' %}{% endif %}
@@ -26,13 +18,14 @@ layout: default
 </section>
 
 <section class="collection shell" id="necklaces" aria-labelledby="necklaces-title">
-  <div class="section-heading"><div><span class="section-index">02 / THE COLLECTION</span><h2 id="necklaces-title"><a href="{{ '/necklaces/' | relative_url }}">Necklaces <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div><p class="section-desc">A little magic, close to your heart.</p></div>
+  <div class="section-heading"><div><span class="section-index">02 / THE COLLECTION</span><h2 id="necklaces-title"><a href="{{ '/necklaces/' | relative_url }}">Necklaces <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div></div>
   {% if necklaces.size > 0 %}
   <div class="featured-grid featured-grid--right {% if necklaces.size < 3 %}featured-grid--few{% endif %}">{% for piece in necklaces limit:5 %}{% include tile.html piece=piece %}{% endfor %}</div>
   {% else %}{% include empty-tiles.html category='necklaces' %}{% endif %}
   <div class="section-tail"><span class="tail-sprig" aria-hidden="true">✧</span><a class="text-link" href="{{ '/necklaces/' | relative_url }}">View all necklaces <span aria-hidden="true">↗</span></a></div>
 </section>
 
+{% comment %}The More section is temporarily hidden until product photos are ready.
 <section class="collection shell collection--more" id="more" aria-labelledby="more-title">
   <div class="section-heading"><div><span class="section-index">03 / THE COLLECTION</span><h2 id="more-title"><a href="{{ '/more/' | relative_url }}">More <span class="heading-arrow" aria-hidden="true">↗</span></a></h2></div><p class="section-desc">Curiosities & other treasures.</p></div>
   <div class="more-layout"><div class="more-editorial"><span class="more-asterisk" aria-hidden="true">✳</span><p>And then,<br><em>something</em><br>unexpected.</p><span class="more-fine">A place for the little things that don't fit neatly into a box.</span></div>
@@ -41,4 +34,5 @@ layout: default
   </div>
   <div class="section-tail"><span class="tail-sprig" aria-hidden="true">✧</span><a class="text-link" href="{{ '/more/' | relative_url }}">View all the little extras <span aria-hidden="true">↗</span></a></div>
 </section>
+{% endcomment %}
 <section class="closing-note shell"><span class="closing-decoration" aria-hidden="true">❧</span><p>Made with a little wonder.<br><em>Worn with a little joy.</em></p></section>
