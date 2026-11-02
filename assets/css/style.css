@@ -38,3 +38,6 @@
 .footer-contact{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin:12px 0 0;font-style:normal;font-size:12px;line-height:1.8;color:#e4e5d7}
 .footer-contact a{color:inherit;text-decoration:none;overflow-wrap:anywhere}
 .footer-contact a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* Main headline: subtly tinted materials, with “and” in the normal font. */
+.hero h1 .hero-material { color:#647254; font-style:normal; font-weight:inherit; letter-spacing:inherit; }
