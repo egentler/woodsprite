@@ -5,7 +5,7 @@ layout: default
 {% assign necklaces = site.pieces | where: 'category', 'necklaces' | where: 'published', true | sort: 'date' | reverse %}
 {% assign more = site.pieces | where: 'category', 'more' | where: 'published', true | sort: 'date' | reverse %}
 <section class="hero shell" aria-labelledby="hero-title">
-  <div class="hero-art" aria-hidden="true"><span class="hero-halo"></span><img src="{{ '/assets/images/woodsprite-fairy.webp' | relative_url }}" alt="" fetchpriority="high" width="979" height="805"></div>
+  <div class="hero-art" aria-hidden="true"><span class="hero-halo"></span><img src="{{ '/assets/images/woodsprite-tree-logo.webp' | relative_url }}" alt="" fetchpriority="high" width="2048" height="1684"></div>
   {% assign hero_material_words = site.data.site.hero_materials | split: ', ' %}
   <div class="hero-copy"><h1 id="hero-title">{{ site.data.site.hero_lead | escape }} <span class="hero-material">{{ hero_material_words[0] | escape }}</span>, <span class="hero-material">{{ hero_material_words[1] | escape }}</span>, and <span class="hero-material">{{ hero_material_words[2] | remove_first: 'and ' | escape }}</span></h1></div>
 </section>
