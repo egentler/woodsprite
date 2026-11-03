@@ -1,5 +1,5 @@
 ---
-title: Earrings
+title: "28"
 category: earrings
 image: /assets/uploads/04-silver-circle-stone-drop-earrings.png
 date: 2026-11-01
