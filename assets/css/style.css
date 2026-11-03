@@ -148,3 +148,16 @@ body::before{display:none!important;}
   .hero .hero-copy h1 .hero-line-one,
   .hero .hero-copy h1 .hero-line-two { display:block; white-space:nowrap; }
 }
+
+/* Tighter footer typography and vertical rhythm. */
+.footer-about { margin-top:12px; line-height:1.5; }
+.footer-contact { margin-top:6px; gap:1px; line-height:1.45; }
+.footer-kicker { margin-bottom:16px; line-height:1.15; }
+.copyright { margin-top:20px; }
+@media (max-width:650px) {
+  .footer-inner { gap:18px; }
+  .footer-about { margin-top:8px; }
+  .footer-contact { margin-top:4px; gap:0; line-height:1.4; }
+  .footer-kicker { margin-bottom:11px; }
+  .copyright { margin-top:14px; }
+}
