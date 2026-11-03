@@ -1,9 +1,8 @@
 title: WoodSprite
 description: WoodSprite jewelry — small wonders inspired by the woods.
-url: ""
-# For a GitHub Pages project named woodsprite, set baseurl: "/woodsprite".
-# For a custom domain or username.github.io root, leave baseurl blank.
-baseurl: "/woodsprite"
+url: "https://woodsprite-creations.com"
+# WoodSprite custom domain uses the site root, not the /woodsprite/ subpath.
+baseurl: ""
 markdown: kramdown
 permalink: pretty
 collections:
