@@ -1,5 +1,5 @@
 ---
-title: Earrings
+title: "8"
 category: earrings
 image: /assets/uploads/img6933-cream-crystal-drops.jpg
 date: 2026-11-01
