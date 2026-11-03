@@ -1,5 +1,5 @@
 ---
-title: Earrings
+title: "16"
 category: earrings
 image: /assets/uploads/img6951-misty-blue-teardrop-earrings.jpg
 date: 2026-11-01
