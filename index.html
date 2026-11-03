@@ -7,7 +7,7 @@ layout: default
 <section class="hero shell" aria-labelledby="hero-title">
   <div class="hero-art" aria-hidden="true"><span class="hero-halo"></span><img src="{{ '/assets/images/woodsprite-tree-fairy-no-text.webp' | relative_url }}" alt="" fetchpriority="high" width="1254" height="1254" style="aspect-ratio:1 / 1; object-fit:contain;"></div>
   {% assign hero_material_words = site.data.site.hero_materials | split: ', ' %}
-  <div class="hero-copy"><h1 id="hero-title">{{ site.data.site.hero_lead | escape }} <span class="hero-material">{{ hero_material_words[0] | escape }}</span>, <span class="hero-material">{{ hero_material_words[1] | escape }}</span>, and <span class="hero-material">{{ hero_material_words[2] | remove_first: 'and ' | escape }}</span></h1></div>
+  <div class="hero-copy"><h1 id="hero-title"><span class="hero-line-one">{{ site.data.site.hero_lead | remove: ' in' | escape }}</span> <span class="hero-line-two">in <span class="hero-material">{{ hero_material_words[0] | escape }}</span>, <span class="hero-material">{{ hero_material_words[1] | escape }}</span>, and <span class="hero-material">{{ hero_material_words[2] | remove_first: 'and ' | escape }}</span></span></h1></div>
 </section>
 
 <section class="collection shell" id="earrings" aria-labelledby="earrings-title">
