@@ -1,5 +1,5 @@
 ---
-title: Earrings
+title: "23"
 category: earrings
 image: /assets/uploads/copperwiretasselearrings.png
 date: 2026-11-01
