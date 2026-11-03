@@ -1,5 +1,5 @@
 ---
-title: Necklace
+title: N3
 category: necklaces
 image: /assets/uploads/neck-1.png
 date: 2026-11-02
