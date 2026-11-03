@@ -132,3 +132,19 @@ body::before{display:none!important;}
   .hero .hero-copy { padding-top: 12px; padding-bottom: 12px; }
   #earrings.collection { padding-top: 24px; }
 }
+
+
+/* Mobile-only: intentionally keep the hero statement on two lines. */
+@media (max-width:650px) {
+  .hero .hero-copy { padding-inline:0; }
+  .hero .hero-copy h1 {
+    width:100%;
+    max-width:none;
+    font-size:clamp(25px,7.4vw,38px);
+    line-height:1.12;
+    letter-spacing:-.046em;
+    text-wrap:normal;
+  }
+  .hero .hero-copy h1 .hero-line-one,
+  .hero .hero-copy h1 .hero-line-two { display:block; white-space:nowrap; }
+}
