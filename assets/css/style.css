@@ -99,3 +99,36 @@ body::before{display:none!important;}
 .hero h1 .hero-material:nth-of-type(1){color:#882d29;} /* copper */
 .hero h1 .hero-material:nth-of-type(2){color:#526013;} /* silver */
 .hero h1 .hero-material:nth-of-type(3){color:#655447;} /* stone */
+
+/* 2026-11-03: Desktop-only compact hero. The mobile layout is unchanged.
+   Shrink the original illustration without altering its object-fit, crop,
+   colors, or proportions. Reveals the beginning of Earrings below the fold.
+   Overrides the image's inline width:100% from the current Jekyll homepage. */
+@media (min-width: 901px) {
+  .hero {
+    min-height: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .hero .hero-art img {
+    width: min(100%, 500px) !important;
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .hero .hero-copy { padding-top: 12px; padding-bottom: 12px; }
+  #earrings.collection { padding-top: 28px; }
+}
+@media (min-width: 651px) and (max-width: 900px) {
+  .hero {
+    min-height: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .hero .hero-art img {
+    width: min(100%, 430px) !important;
+    max-width: 430px;
+    margin-inline: auto;
+  }
+  .hero .hero-copy { padding-top: 12px; padding-bottom: 12px; }
+  #earrings.collection { padding-top: 24px; }
+}
