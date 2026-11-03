@@ -1,5 +1,5 @@
 ---
-title: Earrings
+title: "12"
 category: earrings
 image: /assets/uploads/img6945-filigree-green-gemstones.jpg
 date: 2026-11-01
