@@ -1,5 +1,5 @@
 ---
-title: Blue Stone Hoops
+title: "30"
 category: earrings
 image: /assets/uploads/img6992-blue-beaded-hoops.jpg
 date: 2026-11-01
