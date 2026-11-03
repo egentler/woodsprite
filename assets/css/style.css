@@ -41,3 +41,61 @@
 
 /* Main headline: subtly tinted materials, with “and” in the normal font. */
 .hero h1 .hero-material { color:#647254; font-style:normal; font-weight:inherit; letter-spacing:inherit; }
+
+
+/* WoodSprite desktop text alignment + seamless illustration background.
+   Uses the unmodified illustration's sampled background (#f8ede1).
+   Added last to override earlier responsive rules without changing the layout. */
+:root{--paper:#f8ede1;}
+html,body{background-color:#f8ede1;}
+body{background:#f8ede1;}
+body::before{display:none!important;}
+.site-header,.hero,.hero-art,.hero-copy{background-color:transparent;}
+.hero-halo{display:none!important;}
+.hero-art img{filter:none!important;}
+
+/* Desktop: centered text within the RIGHT column; artwork remains on the left. */
+@media (min-width:651px) {
+  .hero .hero-copy{
+    width:100%;
+    min-width:0;
+    align-self:center;
+    justify-self:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:24px 8px;
+  }
+  .hero .hero-copy h1{
+    width:100%;
+    max-width:620px;
+    margin:0 auto;
+    text-align:center;
+    text-wrap:balance;
+  }
+}
+
+/* Preserve the approved mobile composition: image above, headline below. */
+@media (max-width:650px) {
+  .hero .hero-copy{
+    width:100%;
+    display:block;
+    padding:6px 7px 0;
+    text-align:center;
+  }
+  .hero .hero-copy h1{
+    max-width:530px;
+    margin:0 auto;
+    text-align:center;
+    text-wrap:balance;
+  }
+}
+
+/* Approved reference typography: italic materials individually colored.
+   "and" remains upright since it is outside the material spans in index.html. */
+.hero h1 .hero-material{font-style:italic!important;font-weight:400;letter-spacing:-.035em;}
+.hero h1 .hero-material:nth-of-type(1){color:#882d29;} /* copper */
+.hero h1 .hero-material:nth-of-type(2){color:#526013;} /* silver */
+.hero h1 .hero-material:nth-of-type(3){color:#655447;} /* stone */
