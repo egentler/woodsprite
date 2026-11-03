@@ -1,5 +1,5 @@
 ---
-title: Necklace
+title: N9
 category: necklaces
 image: /assets/uploads/neck-4.png
 date: 2026-11-01
